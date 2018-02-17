@@ -37,6 +37,8 @@ A flavor specifies a virtual resource allocation profile which includes processo
 ```
 openstack image list
 ```
+Screenshot: List of images
+![image list](https://user-images.githubusercontent.com/19154337/36341806-15b0ee18-13f4-11e8-9381-b9c3e938cec1.png)
 
 We will use CentOS7 or Fedora images
 
