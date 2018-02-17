@@ -5,12 +5,12 @@ In this project we pretend to describe the mecanism, used to deploy a cluster on
 
 ### Table of Content
 1. OpenStack commands used in this project 
-	1. [OpenStack command line](#OpenStack-command-line)
-	2. [Create instances](#Create-instances)
-	3. [List the flavors](#How-to-show-the-flavors)
-	4. [List the availabel images](#List-the-availabel-images)
-	5. [List the availabel networks](#List-the-availabel-networks)
-	6. [List the created security groups](#List-the-created-security-groups)
+	* [OpenStack command line](#OpenStack-command-line)
+	* [Create instances](#Create-instances)
+	* [List the flavors](#How-to-show-the-flavors)
+	* [List the availabel images](#List-the-availabel-images)
+	* [List the availabel networks](#List-the-availabel-networks)
+	* [List the created security groups](#List-the-created-security-groups)
 
 2. Scripting
 3. Spark comfiguration
