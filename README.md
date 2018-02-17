@@ -1,10 +1,14 @@
 # clustering-openstack
 
 ### Table of Content
-1. [Project Description](#Project-Description)
+1. [OpenStack command line](#OpenStack-command-line)
+2. [Create instances](#Create-instances)
+3. [List the flavors](#How-to-show-the-flavors)
+4. [List the availabel images](#List-the-availabel-images)
+5. [List the availabel networks](#List-the-availabel-networks)
+6. [List the created security groups](#List-the-created-security-groups)
 
-## OpenStack command line 
-
+### OpenStack command line 
 How to create instances from OpenStack command line interface (Linux Shell).
 
 ### Create instances
@@ -14,7 +18,7 @@ To launch an instance, we must at least specify the flavor, image name, network,
 We will work with the ``Name`` or ``ID`` of the elements that we will show:
 
 
-#### Show  the flavors
+#### List the flavors
 
 ```
 openstack flavor list 
@@ -22,7 +26,7 @@ openstack flavor list
 
 A flavor specifies a virtual resource allocation profile which includes processor, memory, and storage.
 
-#### Show Images
+#### List the availabel images
 
 ```
 openstack image list
@@ -30,12 +34,12 @@ openstack image list
 
 We will use CentOS7 or Fedora images
 
-#### Show networks
+#### List the availabel networks
 ```
 openstack network list
 ```
 
-#### Show security groups
+#### List the created security groups
 
 ```
 openstack security group list
