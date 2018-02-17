@@ -137,5 +137,7 @@ main()
 
 
 
-## Spark.
+#### Spark configuration.
 
+#### Bibliograpgy
+(https://docs.openstack.org/mitaka/install-guide-ubuntu/launch-instance-provider.html)
