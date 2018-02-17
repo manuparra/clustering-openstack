@@ -29,11 +29,11 @@ We will work with the ``Name`` or ``ID`` of the elements that we will show:
 ```
 openstack flavor list 
 ```
+![flavor list](https://user-images.githubusercontent.com/19154337/36341891-7f3521c8-13f5-11e8-87c6-442e428046e9.png)
 
 A flavor specifies a virtual resource allocation profile which includes processor, memory, and storage.
 
 #### List the availabel images
-
 ```
 openstack image list
 ```
@@ -47,11 +47,15 @@ We will use CentOS7 or Fedora images
 openstack network list
 ```
 
-#### List the created security groups
+![network list](https://user-images.githubusercontent.com/19154337/36341907-ba4099b4-13f5-11e8-9343-19c9f32bb0ee.png)
 
+
+#### List the created security groups
 ```
 openstack security group list
 ```
+Screenshot: Security groups
+![scurity group](https://user-images.githubusercontent.com/19154337/36341856-efd324e4-13f4-11e8-8e61-14c60708e302.png)
 
 #### Create the instance
 
