@@ -4,7 +4,8 @@
 In this project we pretend to describe the mecanism, used to deploy a cluster on Spark. We gonna describe the 
 
 ### Table of Content
-1. OpenStack commands used in this project 
+1. Introduction
+2. OpenStack commands used in this project 
 	* [OpenStack command line](#OpenStack-command-line)
 	* [Create instances](#Create-instances)
 	* [List the flavors](#How-to-show-the-flavors)
@@ -12,13 +13,11 @@ In this project we pretend to describe the mecanism, used to deploy a cluster on
 	* [List the availabel networks](#List-the-availabel-networks)
 	* [List the created security groups](#List-the-created-security-groups)
 
-2. Scripting
-3. Spark comfiguration
+3. Scripting
+4. Spark configuration
 
-### OpenStack command line 
-How to create instances from OpenStack command line interface (Linux Shell).
 
-### Create instances
+#### Create instances
 
 To launch an instance, we must at least specify the flavor, image name, network, security group, key, and instance name.
 
