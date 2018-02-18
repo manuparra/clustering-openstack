@@ -79,6 +79,8 @@ openstack floating ip list
 ```
 ![list of floating ip](https://user-images.githubusercontent.com/19154337/36352310-3cba6cf0-14b7-11e8-8b1e-b9021ffe59cc.png)
 
+For each floating IP address that is allocated to your project, the command outputs the ID of the floating IP 		address, the actual floating IP address, the private IP address of the instance the floating IP address is 		associated with, and the ID for the port that the floating IP address is connected to.
+
 * #### Assign Floating IP to the instance:
 
 
@@ -155,3 +157,4 @@ Launch instance provider
 * https://docs.openstack.org/mitaka/install-guide-ubuntu/launch-instance-provider.html
 Floating IP
 * https://docs.openstack.org/python-openstackclient/pike/cli/command-objects/floating-ip.html
+* https://help.dreamhost.com/hc/en-us/articles/215912768-Managing-floating-IP-addresses-using-the-OpenStack-CLI
