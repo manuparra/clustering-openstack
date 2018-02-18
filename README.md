@@ -81,7 +81,7 @@ openstack floating ip list
 
 For each floating IP address that is allocated to your project, the command outputs the ID of the floating IP 		address, the actual floating IP address, the private IP address of the instance the floating IP address is 		associated with, and the ID for the port that the floating IP address is connected to.
 
-* #### Assign Floating IP to the instance:
+* #### Disassociate floating IP of an instance:
 Firstly, let  us see the availabel instances "servers":
 ![server list](https://user-images.githubusercontent.com/19154337/36357208-05cf519e-14fb-11e8-8854-3bdf3989fc7d.png)
 
@@ -93,6 +93,23 @@ Screenshot: Disassociate Floating IP:
 ![disassociate floating ip](https://user-images.githubusercontent.com/19154337/36357374-6f230e18-14fd-11e8-86ea-c09eae8d57b8.png)
 
 We can see how this floating ip is no longer associated to the specified instance.
+
+* #### Create floating IP 
+
+To associate a floating IP, we can use an exisiting one or create a new one and assign it to our project, before assign it to an instance.
+```
+openstack floating ip create <network>
+```
+![create ip floating](https://user-images.githubusercontent.com/19154337/36357950-31cc8ca2-1506-11e8-85a3-42020cf80633.png)
+
+We can see that network in our example, is external.
+
+* #### Associate floating IP to an instance
+```
+openstack server add floating ip CirrOS-cloud-init 192.168.10.68
+```
+![associated floating ip](https://user-images.githubusercontent.com/19154337/36358285-81577484-150c-11e8-8500-aac2955ce114.png)
+Now we can see how the instance called, CirrOS-cloud-init, has an associated floating IP, and it's, 192.168.10.68; which we created in previous step.
 
 ### Assign IP (internal)....
 How to assing a specific Internal IP (10.....) to the instance.
@@ -159,8 +176,8 @@ main()
 #### Spark configuration.
 
 #### Bibliograpgy
-Launch instance provider
-* https://docs.openstack.org/mitaka/install-guide-ubuntu/launch-instance-provider.html
-Floating IP
-* https://docs.openstack.org/python-openstackclient/pike/cli/command-objects/floating-ip.html
-* https://help.dreamhost.com/hc/en-us/articles/215912768-Managing-floating-IP-addresses-using-the-OpenStack-CLI
+- Launch instance provider
+	* https://docs.openstack.org/mitaka/install-guide-ubuntu/launch-instance-provider.html
+- Floating IP
+	* https://docs.openstack.org/python-openstackclient/pike/cli/command-objects/floating-ip.html
+	* https://help.dreamhost.com/hc/en-us/articles/215912768-Managing-floating-IP-addresses-using-the-OpenStack-CLI
