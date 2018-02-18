@@ -23,6 +23,7 @@ To launch an instance, we must at least specify the flavor, image name, network,
 
 We will work with the ``Name`` or ``ID`` of the elements that we will show:
 
+---------------------
 
 #### List the flavors
 
@@ -33,6 +34,8 @@ openstack flavor list
 
 A flavor specifies a virtual resource allocation profile which includes processor, memory, and storage.
 
+------------------------------
+
 #### List the availabel images
 ```
 openstack image list
@@ -41,6 +44,8 @@ Screenshot: List of images
 ![image list](https://user-images.githubusercontent.com/19154337/36341806-15b0ee18-13f4-11e8-9381-b9c3e938cec1.png)
 
 We will use CentOS7 or Fedora images
+
+--------------------------------
 
 #### List the availabel networks
 ```
@@ -57,6 +62,8 @@ openstack security group listlaunch a cluster of master and slaves cirtual machi
 Screenshot: Security groups
 ![scurity group](https://user-images.githubusercontent.com/19154337/36341856-efd324e4-13f4-11e8-8e61-14c60708e302.png)
 
+------------------------
+
 #### Create the instance
 
 Example:
@@ -71,6 +78,8 @@ With our data:
 openstack server create --flavor 3 --image CentOS7  --nic net-id=55c3bd97-fef8-47cf-bde7-a7f6c22f2d2c --security-group default --key-name rashadkey provider-instance
 ```
 ![created instance](https://user-images.githubusercontent.com/19154337/36346610-ec53e78e-1441-11e8-8964-85921835c1b4.png)
+
+--------------------------
 
 ### IP Floating
 * #### List of Floating IP
@@ -110,6 +119,8 @@ openstack server add floating ip CirrOS-cloud-init 192.168.10.68
 ```
 ![associated floating ip](https://user-images.githubusercontent.com/19154337/36358285-81577484-150c-11e8-8500-aac2955ce114.png)
 Now we can see how the instance called, CirrOS-cloud-init, has an associated floating IP, and it's, 192.168.10.68; which we created in previous step.
+
+---------------------------------
 
 ### Assign IP (internal)....
 How to assing a specific Internal IP (10.....) to the instance.
