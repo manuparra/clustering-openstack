@@ -1,6 +1,6 @@
 # clustering-openstack
 
-# Project Description:
+### Project Description
 In this project we pretend to describe the mecanism, used to deploy a cluster on Spark. We gonna describe the 
 
 ### Table of Content
@@ -52,7 +52,7 @@ openstack network list
 
 #### List the created security groups
 ```
-openstack security group list
+openstack security group listlaunch a cluster of master and slaves cirtual machines on openstack command line
 ```
 Screenshot: Security groups
 ![scurity group](https://user-images.githubusercontent.com/19154337/36341856-efd324e4-13f4-11e8-8e61-14c60708e302.png)
@@ -68,12 +68,19 @@ openstack server create --flavor XXXXX --image XXXXXX  --nic net-id=XXXXXXX --se
 With our data:
 
 ```
-openstack server create --flavor XXXXX --image XXXXXX  --nic net-id=XXXXXXX --security-group XXXXXX  --key-name XXXXXXX provider-instance
+openstack server create --flavor 3 --image CentOS7  --nic net-id=55c3bd97-fef8-47cf-bde7-a7f6c22f2d2c --security-group default --key-name rashadkey provider-instance
 ```
+![created instance](https://user-images.githubusercontent.com/19154337/36346610-ec53e78e-1441-11e8-8964-85921835c1b4.png)
 
-### Assing IP Floating
+### IP Floating
+* #### List of Floating IP
+```
+openstack floating ip list
+```
+![list of floating ip](https://user-images.githubusercontent.com/19154337/36352310-3cba6cf0-14b7-11e8-8b1e-b9021ffe59cc.png)
 
-How to assign Floating IP to the instance:
+* #### Assign Floating IP to the instance:
+
 
 
 
@@ -87,7 +94,11 @@ The script will allow us to create an instance environment with specific configu
 
 Input Parameters:
 
-- Options: start, status and delete. Start: Create a new cluster with a name; Delete: Remove all instances assiciated to the cluster; Status: check the status of the cluster.
+- Options: {start, status and delete} 
+	- Start: Create a new cluster with a name;
+	- Delete: Remove all instances assiciated to the cluster;
+	- Status: check the status of the cluster.
+	
 - Name of the cluster (identifier of the cluster)
 - Number of master nodes
 - Number of slave nodes
@@ -140,4 +151,7 @@ main()
 #### Spark configuration.
 
 #### Bibliograpgy
-(https://docs.openstack.org/mitaka/install-guide-ubuntu/launch-instance-provider.html)
+Launch instance provider
+* https://docs.openstack.org/mitaka/install-guide-ubuntu/launch-instance-provider.html
+Floating IP
+* https://docs.openstack.org/python-openstackclient/pike/cli/command-objects/floating-ip.html
