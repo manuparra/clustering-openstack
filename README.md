@@ -82,16 +82,22 @@ openstack floating ip list
 For each floating IP address that is allocated to your project, the command outputs the ID of the floating IP 		address, the actual floating IP address, the private IP address of the instance the floating IP address is 		associated with, and the ID for the port that the floating IP address is connected to.
 
 * #### Assign Floating IP to the instance:
+Firstly, let  us see the availabel instances "servers":
+![server list](https://user-images.githubusercontent.com/19154337/36357208-05cf519e-14fb-11e8-8854-3bdf3989fc7d.png)
 
+Let's disassociate the floating IP of the instance with the name, CirrOS-cloud-init. We can see that its floating IP is 192.168.10.53. To disassociate it, we do the following:
+```
+openstack server remove floating ip CirrOS-cloud-init 192.168.10.53
+```
+Screenshot: Disassociate Floating IP:
+![disassociate floating ip](https://user-images.githubusercontent.com/19154337/36357374-6f230e18-14fd-11e8-86ea-c09eae8d57b8.png)
 
-
+We can see how this floating ip is no longer associated to the specified instance.
 
 ### Assign IP (internal)....
-
 How to assing a specific Internal IP (10.....) to the instance.
 
 ## Script
-
 The script will allow us to create an instance environment with specific configuration parameters.
 
 Input Parameters:
